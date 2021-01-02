@@ -14,7 +14,7 @@
 
   &__box {
     @media screen and (max-width: 600px) {
-     text-align: center;
+      text-align: center;
     }
   }
 
@@ -47,7 +47,7 @@
       color: #47525E;
     }
 
-    & .btn-default{
+    & .btn-default {
       align-self: flex-end;
 
       @media screen and (max-width: 600px) {
@@ -56,6 +56,43 @@
       }
     }
   }
+
+  &__list {
+    margin-top: 4rem;
+    list-style: none;
+    font-size: 1.8rem;
+    color: #251c1c;
+  }
+
+
+  &__item {
+    border: 1px solid #EAEAEA;
+    padding: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    @media screen and (max-width: 600px) {
+      text-align: center;
+      flex-direction: column;
+
+      & > * {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+
+    &--active {
+      @include status(#49AD5B);
+      margin-right: 5px;
+    }
+  }
+
+  
 }
 
 .paragraph {
@@ -66,7 +103,7 @@
 
 .btn-default {
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 1.6rem;
   text-align: center;
   background-color: #E29933;
   border-radius: 5px;
@@ -77,4 +114,25 @@
   &:focus {
     outline: none;
   }
+}
+
+.btn-default-reverse {
+  color: #E29933;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: rgba(226, 153, 51, 0);
+  border: 1px solid #E29933;
+  border-radius: 5px;
+  padding: 1.25rem 4rem;
+  cursor: pointer;
+  transition: .2s ease;
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    background-color: #E29933;
+  }
+
 }
