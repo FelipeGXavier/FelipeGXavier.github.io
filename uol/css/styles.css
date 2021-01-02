@@ -7,4 +7,17 @@ html {
   font-size: 62.5%; }
 
 body {
-  background-color: gray; }
+  font-family: 'Lato', sans-serif; }
+
+.header-logo {
+  width: 8.2rem;
+  height: 3.1rem; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  height: 7.4rem;
+  width: 100vw; 
+}
