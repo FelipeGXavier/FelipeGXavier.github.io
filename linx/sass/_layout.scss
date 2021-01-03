@@ -1,0 +1,16 @@
+.header {
+  margin: 0 auto;
+  width: 95vw;
+  color: #FEFEFE;
+  padding: 4rem 25rem;
+  background-image: linear-gradient(to right bottom, #201C1D, #433E3D);
+
+  & h1 {
+    font-size: 4rem;
+  }
+
+  &__subtitle {
+    font-size: 2.2rem;
+    color: #D5D4D4;
+  }
+}

@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.25%; }
+
+.header {
+  margin: 0 auto;
+  width: 95vw;
+  color: #FEFEFE;
+  padding: 4rem 25rem;
+  background-image: linear-gradient(to right bottom, #201C1D, #433E3D); }
+  .header h1 {
+    font-size: 4rem; }
+  .header__subtitle {
+    font-size: 2.2rem;
+    color: #D5D4D4; }
