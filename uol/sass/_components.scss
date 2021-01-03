@@ -142,6 +142,18 @@
   
   }
 
+  &__box {
+    margin-top: 2rem;
+  }
+
+  &__box .btn-default-reverse {
+    text-decoration: none;
+  }
+
+  &__box .btn-default {
+    text-decoration: none;
+  }
+
   &__input {
     width: 25rem;
 
@@ -189,6 +201,7 @@
   border: none;
   padding: 1rem 2rem;
   cursor: pointer;
+  text-decoration: none;
 
   &:focus {
     outline: none;
