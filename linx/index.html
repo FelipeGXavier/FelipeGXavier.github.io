@@ -1,15 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <header class="header">
-    <h1>Breweries</h1>
-    <p class="header__subtitle">A breweries list by Open Brewery DB</p>
+    <div class="header__box">
+      <h1>Breweries</h1>
+      <p class="header__subtitle">A breweries list by Open Brewery DB</p>
+    </div>
   </header>
+  <main class="container">
+    <div class="filter">
+      <label class="filter-label" for="brew-filter">Filter: </label>
+      <select class="brew-filter" name="brew-filter" id="brew-filter">
+        <option value="">micro</option>
+      </select>
+    </div>
+    <section class="brew-list">
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--micro">micro</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--micro">micro</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--micro">micro</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--brewpub">brewpub</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--micro">micro</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--regional">regional</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--contract">contract</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--regional">regional</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--brewpub">brewpub</span>
+      </div>
+      <div class="brew-list__item">
+        <h1 class="brew-list__item-heading">Avondale Brewing Co</h1>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="line-separator"></div>
+        <span class="brew-list__item-tag--micro">micro</span>
+      </div>
+    </section>
+    <ul class="pagination">
+      <li class="pagination__item active"><a class="pagination__link active" href="#">1</a></li>
+      <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+      <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+    </ul>
+  </main>
 </body>
+
 </html>

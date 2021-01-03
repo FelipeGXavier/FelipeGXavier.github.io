@@ -4,16 +4,130 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.25%; }
+  font-size: 62.25%;
+  font-family: 'Playfair Display', serif; }
 
 .header {
-  margin: 0 auto;
-  width: 95vw;
   color: #FEFEFE;
-  padding: 4rem 25rem;
-  background-image: linear-gradient(to right bottom, #201C1D, #433E3D); }
+  background-image: linear-gradient(to right bottom, #201C1D, #433E3D);
+  padding: 2rem;
+  text-align: center; }
   .header h1 {
     font-size: 4rem; }
   .header__subtitle {
     font-size: 2.2rem;
     color: #D5D4D4; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.filter {
+  margin-top: 1rem; }
+  .filter-label {
+    font-size: 1.8rem;
+    color: #414141;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 2rem; }
+
+.brew-filter {
+  padding: .5rem 3rem .5rem 0; }
+  .brew-filter:focus {
+    outline: none; }
+
+.brew-list {
+  display: flex;
+  flex-wrap: wrap; }
+  .brew-list__item {
+    position: relative;
+    color: #404040;
+    padding: 1.5rem;
+    box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.1);
+    flex-basis: 24%;
+    margin-top: 1rem; }
+    .brew-list__item:not(:nth-child(4n)) {
+      margin-right: 1rem; }
+    @media screen and (min-width: 1900px) {
+      .brew-list__item {
+        flex-basis: 19%; }
+        .brew-list__item:not(:nth-child(5n)) {
+          margin-right: 1rem; } }
+    .brew-list__item-heading {
+      width: 60%;
+      font-weight: 600;
+      font-size: 2.4rem; }
+      @media screen and (min-width: 1900px) {
+        .brew-list__item-heading {
+          font-weight: 600;
+          font-size: 2.8rem; } }
+    @media screen and (min-width: 1900px) {
+      .brew-list__item-tag {
+        font-size: 1.4rem; } }
+    .brew-list__item-tag--micro {
+      display: inline-block;
+      margin-top: 6rem;
+      font-size: 1.4rem;
+      border-radius: 4px;
+      background-color: #00d0b1;
+      padding: 3px 6px;
+      color: white; }
+    .brew-list__item-tag--contract {
+      display: inline-block;
+      margin-top: 6rem;
+      font-size: 1.4rem;
+      border-radius: 4px;
+      background-color: #353535;
+      padding: 3px 6px;
+      color: white; }
+    .brew-list__item-tag--brewpub {
+      display: inline-block;
+      margin-top: 6rem;
+      font-size: 1.4rem;
+      border-radius: 4px;
+      background-color: #FFDD57;
+      padding: 3px 6px;
+      color: #353535; }
+    .brew-list__item-tag--regional {
+      display: inline-block;
+      margin-top: 6rem;
+      font-size: 1.4rem;
+      border-radius: 4px;
+      background-color: #3173DC;
+      padding: 3px 6px;
+      color: white; }
+    .brew-list__item .paragraph {
+      margin-top: 1.5rem;
+      font-size: 1.4rem; }
+      @media screen and (min-width: 1900px) {
+        .brew-list__item .paragraph {
+          font-size: 1.6rem; } }
+
+.pagination {
+  list-style: none;
+  font-size: 2.4rem;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center; }
+  .pagination__item {
+    padding-bottom: 1rem;
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px; }
+    .pagination__item:not(:last-child) {
+      margin-right: 2rem; }
+  .pagination .active {
+    background-color: #353535;
+    color: white !important; }
+  .pagination__link {
+    text-decoration: none;
+    color: #404040; }
+
+.line-separator {
+  margin-left: -1.5rem;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 4.5rem;
+  background-color: #f0f0f0; }

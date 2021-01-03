@@ -1,0 +1,141 @@
+
+@mixin badge($color, $font-color: white) {
+  display: inline-block;
+  margin-top: 6rem;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  background-color: $color;
+  padding: 3px 6px;
+  color: $font-color;
+}
+
+.filter {
+  margin-top: 1rem;
+
+  &-label {
+    font-size: 1.8rem;
+    color: rgb(65, 65, 65);
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 2rem;
+  }
+}
+
+.brew-filter {
+  padding: .5rem 3rem .5rem 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.brew-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    position: relative;
+    color: #404040;
+    padding: 1.5rem;
+    box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.10);
+    flex-basis: 24%;
+    margin-top: 1rem;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 1rem;
+    }
+
+    @media screen and (min-width: 1900px) {
+      flex-basis: 19%;
+
+      &:not(:nth-child(5n)) {
+        margin-right: 1rem;
+      }
+    }
+
+    &-heading {
+      width: 60%;
+      font-weight: 600;
+      font-size: 2.4rem;
+
+      @media screen and (min-width: 1900px) {
+        font-weight: 600;
+        font-size: 2.8rem;
+      }
+    }
+
+    &-tag {
+
+      @media screen and (min-width: 1900px) {
+        font-size: 1.4rem;
+      }
+
+      &--micro {
+        @include badge(rgb(0, 208, 177));
+      }
+
+      &--contract {
+        @include badge(#353535);
+      }
+
+      &--brewpub {
+        @include badge(#FFDD57, #353535);
+      }
+
+      &--regional {
+        @include badge(#3173DC);
+      }
+    }
+
+    & .paragraph {
+      margin-top: 1.5rem;
+      font-size: 1.4rem;
+
+      @media screen and (min-width: 1900px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+.pagination {
+  list-style: none;
+  font-size: 2.4rem;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+
+  &__item {
+    padding-bottom: 1rem;
+    padding-right: 1.75rem;
+    padding-left: 1.75rem;
+    border: 1px solid #E7E7E7;
+    border-radius: 4px;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  & .active {
+    background-color: #353535;
+    color: white !important;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #404040;
+  }
+}
+
+.line-separator {
+  margin-left: -1.5rem;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 4.5rem;
+  background-color: #f0f0f0;
+}
+
+
+
