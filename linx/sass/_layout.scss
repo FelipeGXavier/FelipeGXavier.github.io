@@ -3,6 +3,7 @@
   background-image: linear-gradient(to right bottom, #201C1D, #433E3D);
   padding: 2rem;
   text-align: center;
+
   & h1 {
     font-size: 4rem;
   }
@@ -17,4 +18,25 @@
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 5rem 1rem;
+  background-color: #FAFAFA;
+  bottom: 0;
+  flex-direction: column;
+  margin-top: 8rem;
+  clear: both;
+  position: relative;
+  &-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+
+
+  }
 }

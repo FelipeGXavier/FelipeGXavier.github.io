@@ -5,7 +5,8 @@
 
 html {
   font-size: 62.25%;
-  font-family: 'Playfair Display', serif; }
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden; }
 
 .header {
   color: #FEFEFE;
@@ -21,6 +22,23 @@ html {
 .container {
   width: 80%;
   margin: 0 auto; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 5rem 1rem;
+  background-color: #FAFAFA;
+  bottom: 0;
+  flex-direction: column;
+  margin-top: 8rem;
+  clear: both;
+  position: relative; }
+  .footer-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center; }
 
 .filter {
   margin-top: 1rem; }
@@ -110,6 +128,7 @@ html {
   margin-top: 1rem;
   justify-content: center; }
   .pagination__item {
+    cursor: pointer;
     padding-bottom: 1rem;
     padding-right: 1.75rem;
     padding-left: 1.75rem;
