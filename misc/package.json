@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/styles.css -w"
+    "watch:timeline": "node-sass sass/timeline.scss css/timeline.css -w",
+    "watch:button": "node-sass sass/buttons.scss css/button.css -w"
   },
   "author": "",
   "license": "ISC",

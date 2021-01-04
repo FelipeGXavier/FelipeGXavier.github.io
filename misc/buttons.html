@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/button.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="button step1" id="button">
+      <button class="button__step" id="button__step">Click</button>
+     </div>
+     <br>
+     <div class="btn-green-container">
+      <button class="btn-green">Saiba Mais</button>
+
+      <button class="btn-blue">Saiba Mais</button>
+
+      <button class="btn-red">Saiba Mais</button>
+
+      <button class="btn-yellow">Saiba Mais</button>
+     </div>
+     
+  </div>
+</body>
+
+</html>
+
+<script>
+  let el = document.getElementById("button__step");
+  el.addEventListener('click', () => {
+    let newBtn = document.getElementById("button");
+    const current = currentClass(newBtn);
+    changeClass(newBtn, current);
+  });
+
+  function changeClass(el, className) {
+    let btn = document.getElementById("button__step");
+    if(className == 'step1') {
+      el.classList.remove('step1');
+      el.classList.remove('step3');
+      el.classList.add('step2');
+      btn.innerHTML = 'Step 2';
+    }else if(className == 'step2') {
+      el.classList.remove('step1');
+      el.classList.remove('step2');
+      el.classList.add('step3');
+      btn.innerHTML = 'Step 3';
+    }else {
+      el.classList.remove('step2');
+      el.classList.remove('step3');
+      el.classList.add('step1');
+      btn.innerHTML = 'Click';
+    }
+  }
+
+  function currentClass(el) {
+    const steps = ["step1", "step2", "step3"];
+    const classList = el.classList;
+    return steps.filter(element => classList.contains(element));
+  }
+</script>

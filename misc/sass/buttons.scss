@@ -1,0 +1,82 @@
+@mixin colored-btn($color, $color-border, $color-shadow, $color-hover){
+  margin-right: 2rem;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  background: $color;
+  border: 1px solid $color-border;
+  padding: 17px 53px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px 0px $color-shadow;
+  cursor: pointer;
+  outline: none;
+  transition: all 100ms ease;
+  &:hover {
+    background: $color-hover;
+  }
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  background-color: #1C3041;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.button {
+  margin-top: 2rem;
+  width: 300px;
+  border-radius: 40px;
+  background-color: #666666;
+  box-shadow: inset 0px 0px 14px -5px rgba(0, 0, 0, 0.62);
+  display: flex;
+
+  &__step {
+    padding: 1rem 4rem;
+    border-radius: 40px;
+    ;
+    border: 1px solid rgba(133, 133, 133, 0.99);
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.step1 {
+  justify-content: flex-start;
+}
+
+.step2 {
+  justify-content: center !important;
+}
+
+.step3 {
+  justify-content: flex-end !important;
+}
+
+.btn-green-container {
+  padding: 2rem;
+  border-radius: 4px;
+  background-color: white;
+  width: 80%;
+}
+
+.btn-green {
+  @include colored-btn(#2ed307, #3c931f, #3c931f, #3bd916);
+}
+
+.btn-blue {
+  @include colored-btn(#3645f5, #00064d, #00064d, #515ef5);
+}
+
+.btn-red {
+  @include colored-btn(#d63a3a,#800e0e,#800e0e, #e34949);
+}
+
+.btn-yellow {
+  @include colored-btn(#deed37, #a7b50e, #a7b50e, #e2f04f);
+  color: black;
+}
