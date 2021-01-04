@@ -11,8 +11,7 @@ html {
 .header {
   color: #FEFEFE;
   background-image: linear-gradient(to right bottom, #201C1D, #433E3D);
-  padding: 2rem;
-  text-align: center; }
+  padding: 2rem; }
   .header h1 {
     font-size: 4rem; }
   .header__subtitle {
@@ -20,7 +19,8 @@ html {
     color: #D5D4D4; }
 
 .container {
-  width: 80%;
+  max-width: 80%;
+  min-width: 80;
   margin: 0 auto; }
 
 .footer {
@@ -57,32 +57,24 @@ html {
 .brew-list {
   display: flex;
   flex-wrap: wrap; }
-  .brew-list__item {
+  .brew-list__content {
     position: relative;
+    width: 100%;
     color: #404040;
     padding: 1.5rem;
-    box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.1);
-    flex-basis: 24%;
-    margin-top: 1rem; }
-    .brew-list__item:not(:nth-child(4n)) {
-      margin-right: 1rem; }
-    @media screen and (min-width: 1900px) {
-      .brew-list__item {
-        flex-basis: 19%; }
-        .brew-list__item:not(:nth-child(5n)) {
-          margin-right: 1rem; } }
-    .brew-list__item-heading {
+    box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.1); }
+    .brew-list__content-heading {
       width: 60%;
       font-weight: 600;
       font-size: 2.4rem; }
       @media screen and (min-width: 1900px) {
-        .brew-list__item-heading {
+        .brew-list__content-heading {
           font-weight: 600;
           font-size: 2.8rem; } }
     @media screen and (min-width: 1900px) {
-      .brew-list__item-tag {
+      .brew-list__content-tag {
         font-size: 1.4rem; } }
-    .brew-list__item-tag--micro {
+    .brew-list__content-tag--micro {
       display: inline-block;
       margin-top: 6rem;
       font-size: 1.4rem;
@@ -90,7 +82,7 @@ html {
       background-color: #00d0b1;
       padding: 3px 6px;
       color: white; }
-    .brew-list__item-tag--contract {
+    .brew-list__content-tag--contract {
       display: inline-block;
       margin-top: 6rem;
       font-size: 1.4rem;
@@ -98,7 +90,7 @@ html {
       background-color: #353535;
       padding: 3px 6px;
       color: white; }
-    .brew-list__item-tag--brewpub {
+    .brew-list__content-tag--brewpub {
       display: inline-block;
       margin-top: 6rem;
       font-size: 1.4rem;
@@ -106,7 +98,7 @@ html {
       background-color: #FFDD57;
       padding: 3px 6px;
       color: #353535; }
-    .brew-list__item-tag--regional {
+    .brew-list__content-tag--regional {
       display: inline-block;
       margin-top: 6rem;
       font-size: 1.4rem;
@@ -114,12 +106,45 @@ html {
       background-color: #3173DC;
       padding: 3px 6px;
       color: white; }
-    .brew-list__item .paragraph {
+    .brew-list__content .paragraph {
       margin-top: 1.5rem;
       font-size: 1.4rem; }
       @media screen and (min-width: 1900px) {
-        .brew-list__item .paragraph {
+        .brew-list__content .paragraph {
           font-size: 1.6rem; } }
+  .brew-list__item {
+    position: relative;
+    display: flex;
+    min-width: 20%;
+    max-width: 20%;
+    margin-bottom: 1rem;
+    flex-grow: 1; }
+    .brew-list__item:not(:nth-child(5n)) {
+      padding-right: 1rem; }
+    @media screen and (max-width: 1400px) {
+      .brew-list__item {
+        min-width: 25%;
+        max-width: 25%; }
+        .brew-list__item:not(:nth-child(4n)) {
+          padding-right: 1rem; } }
+    @media screen and (max-width: 1100px) {
+      .brew-list__item {
+        min-width: 33%;
+        max-width: 33%; }
+        .brew-list__item:not(:nth-child(3n)) {
+          padding-right: 1rem; } }
+    @media screen and (max-width: 900px) {
+      .brew-list__item {
+        min-width: 50%;
+        max-width: 50%; }
+        .brew-list__item:not(:nth-child(2n)) {
+          padding-right: 1rem; } }
+    @media screen and (max-width: 600px) {
+      .brew-list__item {
+        min-width: 100%;
+        max-width: 100%; }
+        .brew-list__item:not(:nth-child(1n)) {
+          padding-right: 1rem; } }
 
 .pagination {
   list-style: none;

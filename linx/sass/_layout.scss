@@ -2,8 +2,6 @@
   color: #FEFEFE;
   background-image: linear-gradient(to right bottom, #201C1D, #433E3D);
   padding: 2rem;
-  text-align: center;
-
   & h1 {
     font-size: 4rem;
   }
@@ -16,7 +14,8 @@
 
 
 .container {
-  width: 80%;
+  max-width: 80%;
+  min-width: 80;
   margin: 0 auto;
 }
 
