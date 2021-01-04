@@ -20,7 +20,7 @@
   <main class="container">
     <div class="filter">
       <label class="filter-label" for="brew-filter">Filter: </label>
-      <select class="brew-filter" name="brew-filter" id="brew-filter">
+      <select class="filter-brew" name="brew-filter" id="brew-filter">
         <option value="">micro</option>
       </select>
     </div>
@@ -118,3 +118,12 @@
 </body>
 
 </html>
+
+<script>
+  const elements = document.querySelectorAll(".brew-list__item");
+  elements.forEach(element => {
+    element.addEventListener("click", function() {
+      window.location.href = 'brew-detail.html';
+    });
+  });
+</script>

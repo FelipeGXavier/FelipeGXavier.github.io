@@ -42,17 +42,16 @@ html {
 
 .filter {
   margin-top: 1rem; }
+  .filter-brew {
+    padding: .5rem 3rem .5rem 0; }
+    .filter-brew:focus {
+      outline: none; }
   .filter-label {
     font-size: 1.8rem;
     color: #414141;
     font-weight: bold;
     display: inline-block;
     margin-right: 2rem; }
-
-.brew-filter {
-  padding: .5rem 3rem .5rem 0; }
-  .brew-filter:focus {
-    outline: none; }
 
 .brew-list {
   display: flex;
@@ -113,6 +112,7 @@ html {
         .brew-list__content .paragraph {
           font-size: 1.6rem; } }
   .brew-list__item {
+    cursor: pointer;
     position: relative;
     display: flex;
     min-width: 20%;
@@ -168,6 +168,24 @@ html {
     text-decoration: none;
     color: #404040; }
 
+.previous {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+  .previous__text {
+    color: #4A4A4A; }
+
+.brew {
+  font-size: 1.6rem;
+  color: #4A4A4A;
+  box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem; }
+  .brew__title {
+    margin-bottom: 1rem;
+    font-size: 4.2rem; }
+  .brew__info {
+    list-style: none; }
+
 .line-separator {
   margin-left: -1.5rem;
   position: absolute;
@@ -175,3 +193,6 @@ html {
   height: 1px;
   bottom: 4.5rem;
   background-color: #f0f0f0; }
+
+.link {
+  text-decoration: none; }
