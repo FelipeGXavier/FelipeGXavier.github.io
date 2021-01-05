@@ -22,9 +22,28 @@
 
     <h4 class="title">Modal: </h4>
     <div class="btn-row">
-      <button class="btn-default">Small Modal</button>
-      <button class="btn-default">Medium Modal</button>
-      <button class="btn-default">Large Modal</button>
+      <button id="lg-modal-btn" class="btn-default">Large Modal</button>
+      <button id="sm-modal-btn" class="btn-default">Small Modal</button>
+    </div>
+
+    <div id="lg-modal" class="modal">
+      <div class="lg-modal-content">
+        <span class="close">&times;</span>
+        <h1 class="modal-title">Title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, velit minima facilis exercitationem
+          deserunt at nisi doloremque, assumenda asperiores repellat corporis expedita, officiis pariatur possimus rem
+          voluptatum ipsa? Iusto, ullam.</p>
+      </div>
+    </div>
+
+    <div id="sm-modal" class="modal">
+      <div class="sm-modal-content">
+        <span class="close">&times;</span>
+        <h1 class="modal-title">Title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, velit minima facilis exercitationem
+          deserunt at nisi doloremque, assumenda asperiores repellat corporis expedita, officiis pariatur possimus rem
+          voluptatum ipsa? Iusto, ullam.</p>
+      </div>
     </div>
 
     <h4 class="title">Dropdown: </h4>
@@ -35,3 +54,39 @@
 </body>
 
 </html>
+
+<script>
+  let modal = document.getElementById('lg-modal');
+  let btn = document.getElementById('lg-modal-btn');
+  let closeBtn = document.getElementsByClassName('close')[0];
+
+  let modalSmall = document.getElementById('sm-modal');
+  let btnSmall = document.getElementById('sm-modal-btn');
+  let closeBtnSmall = document.getElementsByClassName('close')[1];
+
+
+  btn.onclick = () => {
+    modal.style.display = 'block';
+  };
+
+
+  closeBtn.onclick = () => {
+    modal.style.display = 'none';
+  };
+
+  btnSmall.onclick = () => {
+    modalSmall.style.display = 'block';
+  };
+
+
+  closeBtnSmall.onclick = () => {
+    modalSmall.style.display = 'none';
+  };
+
+  window.onclick = (event) => {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+      modalSmall.style.display = 'none';
+    }
+  };
+</script>

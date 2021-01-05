@@ -1,3 +1,11 @@
+@mixin modal-size($size){ 
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: $size;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -49,7 +57,6 @@ body {
   margin-top: 4rem;
   width: 40%;
   display: flex;
-  justify-content: space-between;
 }
 
 .btn-default {
@@ -57,6 +64,7 @@ body {
   padding: 1rem 3rem;
   font-weight: bold;
   font-size: 1rem;
+  margin-right: 1rem;
   border-radius: 4px;
   border: none;
   color: white;
@@ -80,4 +88,35 @@ body {
   &:hover {
     background-image: linear-gradient(to right bottom, #25335f, #2e3d6e);
   }
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 20; 
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8); 
+}
+
+.lg-modal-content {
+  @include modal-size(80%);
+}
+
+.sm-modal-content {
+  @include modal-size(30%);
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+.modal-title {
+  margin-bottom: 1rem;
+  padding: 4px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
 }
