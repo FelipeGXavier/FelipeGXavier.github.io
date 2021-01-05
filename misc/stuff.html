@@ -48,6 +48,22 @@
 
     <h4 class="title">Dropdown: </h4>
 
+    <div class="menu">
+      <ul class="menu-nav">
+        <li class="menu-nav__item"><a class="menu-nav__link" href="#">Home</a></li>
+        <li class="menu-nav__item"><a class="menu-nav__link" href="#">Contact us</a></li>
+        <li class="menu-nav__item"><a class="menu-nav__link" href="#">About</a></li>
+        <li class="menu-nav__item dropdown"><a class="menu-nav__link dropbtn" href="#">External</a>
+        <div class="dropdown-content">
+          <a class="menu-nav__link-drop" href="#">Link 1</a>
+          <a class="menu-nav__link-drop" href="#">Link 2</a>
+          <a class="menu-nav__link-drop" href="#">Link 3</a>
+        </div>
+        </li>
+      </ul>
+    </div>
+
+
     <h4 class="title">Blog: </h4>
   </div>
 
@@ -84,7 +100,7 @@
   };
 
   window.onclick = (event) => {
-    if (event.target == modal) {
+    if (event.target == modal || event.target == modalSmall)  {
       modal.style.display = 'none';
       modalSmall.style.display = 'none';
     }
