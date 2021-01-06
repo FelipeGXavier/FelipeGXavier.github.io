@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <ul class="header__list">
+      <li class="header__item"><a href="#" class="header__link">Sobre</a></li>
+      <li class="header__item"><a href="#" class="header__link">Portfolio</a></li>
+      <li class="header__item"><a href="#" class="header__link btn">Download CV</a></li>
+    </ul>
+  </header>
+
+  <section class="person">
+    <div class="person__profile">
+      <h1 class="person__name">Felipe Xavier</h1>
+      <img class="photo" src="assets/img/barba.jpg" alt="">
+    </div>
+    <div class="person__run">
+      <div class="text-wrapper">
+        <p class="person__run--lower-part">
+          Meus
+        </p>
+        <p class="person__run--high-part">
+          Trabalhos
+        </p>
+      </div>
+      <div>
+        <p class="person__run--subtitle">
+          Desenvolvedor de Software
+        </p>
+      </div>
+      <div class="play">
+        <div class="play__symbol">&#9658;</div>
+      </div>
+    </div>
+  </section>
+  <div class="line"></div>
+  <main>
+    <section class="posts">
+      <div class="card">
+        <div class="card__content">
+          <img class="card__logo" src="assets/img/twitch.png" alt="">
+          <p class="card__title">Posts - Medium</p>
+          <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam vero perspiciatis animi
+            ipsum, ducimus optio dicta nesciunt eius velit nihil.</p>
+          <a class="card__link" href="#" class="standard-btn">twitch.tv</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content">
+          <img class="card__logo" src="assets/img/twitch.png" alt="">
+          <p class="card__title">Posts - Medium</p>
+          <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam vero perspiciatis animi
+            ipsum, ducimus optio dicta nesciunt eius velit nihil.</p>
+          <a class="card__link" href="#" class="standard-btn">twitch.tv</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__content">
+          <img class="card__logo" src="assets/img/twitch.png" alt="">
+          <p class="card__title">Posts - Medium</p>
+          <p class="card__desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam vero perspiciatis animi
+            ipsum, ducimus optio dicta nesciunt eius velit nihil.</p>
+          <a class="card__link" href="#" class="standard-btn">twitch.tv</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h3 class="projects__title">
+        Projetos pessoais
+      </h3>
+      <p class="projects__subtitle">
+        FrontEnd e UX
+      </p>
+
+      <div class="gallery">
+        <img class="gallery__photo" src="assets/img/first.jpg" alt="">
+        <img class="gallery__photo" src="assets/img/second.jpg" alt="">
+        <img class="gallery__photo" src="assets/img/third.jpg" alt="">
+        <div class="gallery__show">
+          <h4>Projeto</h4>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis odit molestiae natus vitae fugiat eius impedit consequuntur neque nulla quidem dignissimos ullam repudiandae harum nisi, unde iure doloremque ducimus est!</p>
+          <div class="gallery__show-expand">
+            <p>Expandir</p>
+            <img class="gallery__show-icon" src="assets/img/expand.svg" alt="">
+          </div>
+        </div>
+        <img class="gallery__photo" src="assets/img/fifth.jpg" alt="">
+        <img class="gallery__photo" src="assets/img/sixth.jpg" alt="">
+        <img class="gallery__photo" src="assets/img/seventh.jpg" alt="">
+      </div>
+    </section>
+
+    <section class="contact">
+      <h3 class="contact__title">Você quer me contratar?</h3>
+      <p class="contact__subtitle">Se você gostou do meu trabalho</p>
+      <div class="contact__box">
+        <input class="contact__box-input" type="text" placeholder="Coloque seu email">
+        <span class="contact__box-badge">Enviar</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h1 class="footer__logo">Felipe Xavier</h1>
+    <nav class="navigation">
+      <a href="#" class="navigation__link">Sobre</a>
+      <a href="#" class="navigation__link">Portfolio</a>
+      <a href="#" class="navigation__link">Download CV</a>
+    </nav>
+    <ul class="footer__social">
+      <li class="footer__social-icon"><a href="#"><img src="assets/img/linkedin-white.svg" alt=""></a></li>
+      <li class="footer__social-icon"><a href="#"><img src="assets/img/twitter-white.svg" alt=""></a></li>
+      <li class="footer__social-icon--facebook-size"><a href="#"><img src="assets/img/facebook-white.svg" alt=""></a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
+
+<script>
+  let galleryExpandIcon = document.getElementsByClassName('gallery__show-icon')[0];
+  galleryExpandIcon.addEventListener('click', () => {
+    let galleryBox = document.getElementsByClassName('gallery__show')[0];
+    if(galleryBox.classList.contains('expanded')){
+      galleryBox.classList.remove('expanded');
+  }else {
+    galleryBox.classList.add('expanded');
+  }
+  });
+  
+</script>
