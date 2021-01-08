@@ -1,0 +1,275 @@
+.feature {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+
+  & .lg-title {
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
+
+    width: 50%;
+  }
+}
+
+.social {
+  display: flex;
+  list-style: none;
+  align-self: flex-end;
+
+  @media screen and (max-width: 900px) {
+    margin-top: 4rem;
+    align-self: center;
+  }
+
+  &__icon {
+    width: 1.5rem;
+
+    @media screen and (max-width: 900px) {
+      width: 3rem;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 2rem;
+  }
+}
+
+.photo {
+  width: 100%;
+  margin-top: 2rem;
+  display: block;
+  border: 4px;
+}
+
+.paragraph {
+  margin-top: 3rem;
+  color: #66616A;
+  font-size: 1.8rem;
+  margin-bottom: 12rem;
+}
+
+.explore {
+  & ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  & .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    position: relative;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
+
+  }
+
+  & .images {
+    display: flex;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 46px;
+  }
+}
+
+.symbol {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 45%;
+  color: #F96240;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    right: -2rem;
+    top: -1.5rem;
+    z-index: -1;
+    background-color: white;
+  }
+}
+
+.text-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #CACACA;
+  padding-bottom: 10rem;
+
+  & .paragraph {
+    margin: 0;
+  }
+
+  & .btn {
+    text-decoration: none;
+    background-color: #EF8E70;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    padding: 1.5rem 3rem;
+  }
+}
+
+.box-min {
+  flex-basis: 50%;
+}
+
+.awards {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  flex-wrap: wrap;
+  margin-bottom: 12rem;
+
+
+  @media screen and (max-width: 900px) {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__icon {
+    margin-top: 1rem;
+    position: absolute;
+    left: 0;
+
+    @media screen and (max-width: 900px) {
+      margin: 0 auto;  
+      margin-bottom: 3rem;
+      width: 9rem;
+      position: static;
+    }
+  }
+
+  &__award {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+
+    @media screen and (max-width: 900px) {
+      display: block;
+    }
+    
+    &-title {
+      font-size: 2.2rem;
+      line-height: 3.2rem;
+      font-weight: 500;
+    }
+
+    &-subtitle {
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      
+    }
+
+    &-year {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &-desc {
+      width: 100%;
+      margin: 0;
+      padding-left: 26.5rem;
+      padding-right: 10rem;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      opacity: 0.8;
+
+      @media screen and (max-width: 900px) {
+        display: block;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  @media screen and (max-width: 900px) {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  &__info {
+    flex-basis: 40%;
+
+    @media screen and (max-width: 900px) {
+      flex-basis: 100%;
+    }
+  }
+  &__title {
+    font-size: 4rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+  }
+
+  &__desc {
+    font-size: 1.6rem;
+    color: #66616A;
+  }
+
+  &__row {
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 6rem;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      @media screen and (max-width: 900px) {
+        margin-bottom: 3rem;
+      }
+    }
+    
+  }
+}
+
+
+
+p {
+  margin: 0;
+}
+
+.content {
+  width: 2rem;
+  cursor: pointer;
+}
