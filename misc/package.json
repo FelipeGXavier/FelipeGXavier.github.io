@@ -6,7 +6,8 @@
   "scripts": {
     "watch:timeline": "node-sass sass/timeline.scss css/timeline.css -w",
     "watch:button": "node-sass sass/buttons.scss css/button.css -w",
-    "watch:stuff": "node-sass sass/stuff.scss css/stuff.css -w"
+    "watch:stuff": "node-sass sass/stuff.scss css/stuff.css -w",
+    "watch:notes": "node-sass sass/notes.scss css/notes.css -w"
   },
   "author": "",
   "license": "ISC",

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/notes.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <section class="content">
+      <button class="add-note" id="add-note">Add Note</button>
+      <div class="note" id="note">
+        <span id="close">x</span>
+        <textarea class="note-text" name="" id="note-text" cols="30" rows="10"></textarea>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
+
+<script>
+  //@TODO add debounce in events 
+
+  const note = document.getElementById("note");
+  const noteInput = document.getElementById('note-text');
+  const addNoteBtn = document.getElementById("add-note");
+  const savedNote = JSON.parse(localStorage.getItem('note'));
+  const closeNoteBtn = document.getElementById('close');
+
+  closeNoteBtn.addEventListener('click', () => {
+    note.style.display = 'none';
+    localStorage.removeItem('note');
+  });
+
+  addNoteBtn.addEventListener('click', () => {
+    if (note.style.display == 'none') {
+      note.style.display = 'block';
+      const blankNote = {
+        top: "auto",
+        left: "60%",
+        noteText: ""
+      };
+      localStorage.setItem('note', JSON.stringify(blankNote));
+    }
+  });
+
+  if (savedNote) {
+    const savedTopPosition = savedNote.top || '';
+    const savedLeftPosition = savedNote.left || '';
+    const savedNoteText = savedNote.noteText || '';
+    note.style.top = savedTopPosition;
+    note.style.left = savedLeftPosition;
+    noteInput.value = savedNoteText;
+  } else {
+    note.style.display = 'none';
+  }
+
+  noteInput.addEventListener('input', (event) => {
+    if (savedNote) {
+      savedNote.noteText = event.target.value;
+      localStorage.setItem('note', JSON.stringify(savedNote));
+    }
+
+  });
+
+  dragElement(note);
+
+  function dragElement(elmnt) {
+    let pos1 = 0,
+      pos2 = 0,
+      pos3 = 0,
+      pos4 = 0;
+
+    elmnt.onmousedown = dragMouseDown;
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      const topMeasure = (elmnt.offsetTop - pos2) + "px";
+      const leftMeasure = (elmnt.offsetLeft - pos1) + "px";
+      elmnt.style.top = topMeasure;
+      elmnt.style.left = leftMeasure;
+      saveNoteStorage(topMeasure, leftMeasure);
+    }
+
+    function saveNoteStorage(top, left) {
+      const noteText = noteInput.value;
+      const note = {
+        top,
+        left,
+        noteText
+      };
+      localStorage.setItem('note', JSON.stringify(note));
+
+    }
+
+    function closeDragElement() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+</script>
